@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scrollbar-gutter: stable; }
+body { font-family: 'Fira Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Fira Code', monospace; }
+
+/* Line clamp */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Search highlight */
+mark {
+  background-color: #FEF08A;
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Touch targets */
+a, button { touch-action: manipulation; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

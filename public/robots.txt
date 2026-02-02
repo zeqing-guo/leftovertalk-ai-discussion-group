@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ainotes.lambdaintheshell.com/sitemap.xml

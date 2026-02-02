@@ -155,7 +155,7 @@ def main():
         }
     }
 
-    output_path = os.path.join(script_dir, 'data.json')
+    output_path = os.path.join(script_dir, 'public', 'data.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
