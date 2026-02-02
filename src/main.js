@@ -10,12 +10,12 @@ import { createIcons, icons } from 'lucide';
   // --- i18n ---
   const UI_STRINGS = {
     htmlLang:        { zh: 'zh-CN', en: 'en' },
-    metaDescription: { zh: '边角聊 AI 讨论组 - 社区成员分享的 AI 工具与经验', en: 'LeftoverTalk AI Discussion Group - AI tools and experiences shared by community members' },
-    pageTitle:       { zh: '边角聊 AI 讨论组', en: 'LeftoverTalk AI Group' },
-    logoAlt:         { zh: '边角聊 AI 讨论组', en: 'LeftoverTalk AI Group' },
+    metaDescription: { zh: '边角聊 AI 讨论组知识库 - 社区成员分享的 AI 工具与经验', en: 'LeftoverTalk AI Discussion Group Knowledge Base - AI tools and experiences shared by community members' },
+    pageTitle:       { zh: '边角聊 AI 讨论组知识库', en: 'LeftoverTalk AI Group Knowledge Base' },
+    logoAlt:         { zh: '边角聊 AI 讨论组知识库', en: 'LeftoverTalk AI Group Knowledge Base' },
     searchPlaceholder: { zh: '搜索分享、成员...', en: 'Search posts, group members...' },
     clearSearchAria: { zh: '清除搜索', en: 'Clear search' },
-    heroTitle:       { zh: '边角聊 AI 讨论组', en: 'LeftoverTalk AI Group' },
+    heroTitle:       { zh: '边角聊 AI 讨论组知识库', en: 'LeftoverTalk AI Group Knowledge Base' },
     heroSubtitle:    { zh: '群友们共同整理的 AI 工具推荐与一线使用经验。欢迎在推特关注和联系码农（', en: 'AI tool recommendations and first-hand experiences curated by group members. Follow and DM the admin on Twitter (' },
     heroSubtitleEnd: { zh: '）申请加入讨论组。', en: ') to join the group.' },
     tabTools:        { zh: '工具', en: 'Tools' },
@@ -29,7 +29,7 @@ import { createIcons, icons } from 'lucide';
     emptyHeading:    { zh: '没有找到结果', en: 'No results found' },
     emptyDesc:       { zh: '试试调整搜索关键词或筛选条件。', en: 'Try adjusting your search terms or filters.' },
     emptyClearBtn:   { zh: '清除所有筛选', en: 'Clear all filters' },
-    footerText:      { zh: '边角聊 AI 讨论组 &middot; 社区知识库', en: 'LeftoverTalk AI Group &middot; Community Knowledge Base' },
+    footerText:      { zh: '边角聊 AI 讨论组知识库', en: 'LeftoverTalk AI Group Knowledge Base' },
     memberBadge:     { zh: '群友作品', en: 'Group Member Project' },
     expandText:      { zh: '展开全文', en: 'Show more' },
     collapseText:    { zh: '收起', en: 'Show less' },
@@ -392,7 +392,23 @@ import { createIcons, icons } from 'lucide';
   }
 
   // --- Data Loading ---
-  function loadData() {
+  function initStateFromData(data, projects) {
+    state.data = data;
+    const toolByName = {};
+    (data.tools || []).forEach(t => {
+      toolByName[t.name] = t;
+      if (t.nameZh) toolByName[t.nameZh] = t;
+    });
+    state.memberProjectNames = new Set(projects.map(p => p.toolName));
+    state.memberProjectByName = {};
+    projects.forEach(p => { state.memberProjectByName[p.toolName] = p; });
+    state.projects = projects.map(p => {
+      const tool = toolByName[p.toolName];
+      return { ...p, description: tool ? tool.description : '' };
+    });
+  }
+
+  function loadDataViaFetch() {
     const dataFile = state.lang === 'en' ? './data-en.json' : './data.json';
     const projectsFile = state.lang === 'en' ? './member-projects-en.json' : './member-projects.json';
 
@@ -401,26 +417,25 @@ import { createIcons, icons } from 'lucide';
       fetch(projectsFile).then(r => r.json()),
     ])
       .then(([data, projects]) => {
-        state.data = data;
-        const toolByName = {};
-        (data.tools || []).forEach(t => {
-          toolByName[t.name] = t;
-          // Also index by nameZh for cross-language member-projects matching
-          if (t.nameZh) toolByName[t.nameZh] = t;
-        });
-        state.memberProjectNames = new Set(projects.map(p => p.toolName));
-        state.memberProjectByName = {};
-        projects.forEach(p => { state.memberProjectByName[p.toolName] = p; });
-        state.projects = projects.map(p => {
-          const tool = toolByName[p.toolName];
-          return { ...p, description: tool ? tool.description : '' };
-        });
+        initStateFromData(data, projects);
         renderContent();
       })
       .catch(err => {
         console.error('Failed to load data:', err);
         contentGrid.innerHTML = `<p class="text-muted text-sm col-span-2 text-center py-8">${escapeHTML(t('loadError'))}</p>`;
       });
+  }
+
+  function loadData() {
+    const data = state.lang === 'en' ? window.__DATA_EN__ : window.__DATA_ZH__;
+    const projects = state.lang === 'en' ? window.__PROJECTS_EN__ : window.__PROJECTS_ZH__;
+
+    if (!data || !projects) {
+      return loadDataViaFetch();
+    }
+
+    initStateFromData(data, projects);
+    renderContent();
   }
 
   // --- Events ---
