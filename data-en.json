@@ -1,0 +1,1167 @@
+{
+  "tools": [
+    {
+      "name": "Tiimer",
+      "nameZh": "Tiimer",
+      "date": "Jan 13",
+      "recommenders": [
+        "Yuting"
+      ],
+      "description": "A timer and Pomodoro iOS app, newly launched on the App Store",
+      "urls": [
+        "https://apps.apple.com/us/app/tiimer/id6754963701"
+      ]
+    },
+    {
+      "name": "Superpowers (obra/superpowers)",
+      "nameZh": "Superpowers (obra/superpowers)",
+      "date": "Jan 13",
+      "recommenders": [
+        "知县",
+        "码农"
+      ],
+      "description": "An agentic skills framework and software development methodology for Claude Code, providing 20+ skills (such as TDD, system debugging, brainstorming, etc.) that let Claude Code automatically trigger corresponding workflows",
+      "urls": [
+        "https://github.com/obra/superpowers"
+      ]
+    },
+    {
+      "name": "Sukka's AI Traffic Rules (ai.conf)",
+      "nameZh": "Sukka 的 AI 分流规则集（ai.conf）",
+      "date": "Jan 13",
+      "recommenders": [
+        "Elliot"
+      ],
+      "description": "A comprehensive AI domain list for proxy tools like Surge/Clash to handle AI-related IP restrictions, routing traffic for AI services (ChatGPT, Claude, Gemini, etc.) through designated nodes",
+      "urls": [
+        "https://ruleset.skk.moe/List/non_ip/ai.conf"
+      ]
+    },
+    {
+      "name": "OpenCode",
+      "nameZh": "OpenCode",
+      "date": "Jan 13",
+      "recommenders": [
+        "码农",
+        "Elliot"
+      ],
+      "description": "An open-source AI coding agent CLI tool supporting multiple models (Claude, OpenAI, Google, etc.), serving as an open-source alternative to Claude Code with support for free model usage via Antigravity and similar services",
+      "urls": [
+        "https://opencode.ai/"
+      ]
+    },
+    {
+      "name": "Antigravity (Google IDE)",
+      "nameZh": "Antigravity（Google IDE）",
+      "date": "Jan 13",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "A cloud IDE by Google with built-in AI coding capabilities; its model quota can be repurposed for Claude Code or OpenCode via tools like antigravity-claude-proxy",
+      "urls": [
+        "https://idx.google.com/"
+      ]
+    },
+    {
+      "name": "Sspai Article: A Lawyer's AI Usage Report",
+      "nameZh": "少数派文章：一位律师的 AI 使用报告",
+      "date": "Jan 13",
+      "recommenders": [
+        "闲线"
+      ],
+      "description": "An article about using AI in daily work, written by a lawyer who describes how they apply AI to handle different types of work with tailored strategies for various scenarios",
+      "urls": [
+        "https://sspai.com/post/104638"
+      ]
+    },
+    {
+      "name": "skillstore.io / skillsmp.com",
+      "nameZh": "skillstore.io / skillsmp.com",
+      "date": "Jan 14",
+      "recommenders": [
+        "Yuting"
+      ],
+      "description": "Discovery platforms for Claude Code skills (extension packs), making it easy to find and browse available skills",
+      "urls": [
+        "https://skillstore.io/",
+        "https://skillsmp.com/"
+      ]
+    },
+    {
+      "name": "ui-ux-pro-max-skill",
+      "nameZh": "ui-ux-pro-max-skill",
+      "date": "Jan 14",
+      "recommenders": [
+        "Yuting"
+      ],
+      "description": "A UI/UX design enhancement skill for Claude Code that significantly improves the visual quality and mobile responsiveness of Claude-generated frontend pages",
+      "urls": [
+        "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+      ]
+    },
+    {
+      "name": "Quotio",
+      "nameZh": "Quotio",
+      "date": "Jan 14",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "A macOS menu bar app for unified quota tracking and smart auto-switching across multiple AI subscriptions including Claude, Gemini, OpenAI, Qwen, and Antigravity",
+      "urls": [
+        "https://github.com/nguyenphutrong/quotio"
+      ]
+    },
+    {
+      "name": "yt-dlp",
+      "nameZh": "yt-dlp",
+      "date": "Jan 14",
+      "recommenders": [
+        "sToney"
+      ],
+      "description": "A command-line tool for downloading videos from YouTube and other platforms; an actively maintained fork of youtube-dl",
+      "urls": [
+        "https://github.com/yt-dlp/yt-dlp"
+      ]
+    },
+    {
+      "name": "MedGemma 1.5 4B / MedASR",
+      "nameZh": "MedGemma 1.5 4B / MedASR",
+      "date": "Jan 14",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Open medical AI models from Google Research. MedGemma handles medical imaging and text multimodal analysis (including 3D CT/MRI), while MedASR performs automatic medical speech transcription",
+      "urls": [
+        "https://developers.google.com/health-ai-developer-foundations/medgemma"
+      ]
+    },
+    {
+      "name": "CodexBar",
+      "nameZh": "CodexBar",
+      "date": "Jan 14",
+      "recommenders": [
+        "Elliot"
+      ],
+      "description": "A macOS menu bar app that lets you view OpenAI Codex and Claude Code usage statistics without logging in",
+      "urls": [
+        "https://github.com/steipete/CodexBar"
+      ]
+    },
+    {
+      "name": "NotebookLM",
+      "nameZh": "NotebookLM",
+      "date": "Jan 14",
+      "recommenders": [
+        "酱油",
+        "Elliot",
+        "Akira"
+      ],
+      "description": "Google's AI research and learning tool, ideal for building knowledge bases and exam prep, powered by Gemini 3 Flash",
+      "urls": [
+        "https://notebooklm.google.com/"
+      ]
+    },
+    {
+      "name": "Heptabase",
+      "nameZh": "Heptabase",
+      "date": "Jan 14",
+      "recommenders": [
+        "范德伊彪"
+      ],
+      "description": "A whiteboard-based research and knowledge management tool deeply integrated with LLMs, serving as an alternative to Obsidian",
+      "urls": [
+        "https://heptabase.com/"
+      ]
+    },
+    {
+      "name": "Alma",
+      "nameZh": "Alma",
+      "date": "Jan 14",
+      "recommenders": [
+        "Elliot"
+      ],
+      "description": "An AI desktop client developed by yetone, supporting unified management of multiple model providers with a privacy-first approach",
+      "urls": [
+        "https://alma.now/"
+      ]
+    },
+    {
+      "name": "OpenRouter",
+      "nameZh": "OpenRouter",
+      "date": "Jan 14",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "A unified AI API platform providing access to 400+ AI models through a single interface, letting you try APIs before deciding whether to deploy locally",
+      "urls": [
+        "https://openrouter.ai/"
+      ]
+    },
+    {
+      "name": "Conductor",
+      "nameZh": "Conductor",
+      "date": "Jan 15",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "Run multiple AI coding agents (such as Claude Code) in parallel on Mac, providing isolated git worktree workspaces and a visual monitoring dashboard for managing multiple agents' progress and reviewing/merging code",
+      "urls": [
+        "https://www.conductor.build"
+      ]
+    },
+    {
+      "name": "agent-browser (Vercel Labs)",
+      "nameZh": "agent-browser (Vercel Labs)",
+      "date": "Jan 15",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "A browser automation CLI tool for AI agents that supports using the user's browser profile, allowing agents to access websites in a logged-in state for web scraping and automation",
+      "urls": [
+        "https://github.com/vercel-labs/agent-browser"
+      ]
+    },
+    {
+      "name": "TRAE IDE",
+      "nameZh": "TRAE IDE",
+      "date": "Jan 15",
+      "recommenders": [
+        "酱油"
+      ],
+      "description": "A free AI IDE coding tool by ByteDance, competing with Cursor, with Chinese language support and an integrated AI Coding Agent. The international version supports Claude and GPT models, while the domestic version integrates Doubao and DeepSeek models",
+      "urls": [
+        "https://trae.ai"
+      ]
+    },
+    {
+      "name": "Langfuse",
+      "nameZh": "Langfuse",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "Claire"
+      ],
+      "description": "An LLM observability tool for monitoring and debugging large language model applications, acquired by ClickHouse",
+      "urls": [
+        "https://langfuse.com/"
+      ]
+    },
+    {
+      "name": "VibeTown",
+      "nameZh": "VibeTown",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "A Gather Town-based AI agent collaboration project that enables multi-agent cooperation in a virtual environment, built in a vibe coding style",
+      "urls": [
+        "https://x.com/coooolxyh/status/2010204207887069269"
+      ]
+    },
+    {
+      "name": "AgentCraft",
+      "nameZh": "AgentCraft",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Places Claude Code agents inside an RTS game UI where each companion is an agent, built as an RTS game interface using vibe coding",
+      "urls": [
+        "https://www.getagentcraft.com/"
+      ]
+    },
+    {
+      "name": "ralph-claude-code",
+      "nameZh": "ralph-claude-code",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Forces Claude to think longer like Codex, improving accuracy for complex coding tasks that are prone to bugs",
+      "urls": [
+        "https://github.com/frankbria/ralph-claude-code"
+      ]
+    },
+    {
+      "name": "Claude Chrome Extension (MCP)",
+      "nameZh": "Claude Chrome 插件（MCP）",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Claude's browser extension with its own MCP protocol implementation, enabling browser automation control",
+      "urls": [
+        "https://claude.com/chrome"
+      ]
+    },
+    {
+      "name": "Claude Code Skill System",
+      "nameZh": "Claude Code Skill 系统",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "Connor"
+      ],
+      "description": "Best practices for developing agents and skills following Claude's officially recommended skill structure (SKILL.md, reference.md, examples.md, scripts/)",
+      "urls": [
+        "https://code.claude.com/docs/en/skills"
+      ]
+    },
+    {
+      "name": "AnythingLLM",
+      "nameZh": "AnythingLLM",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "范德伊彪"
+      ],
+      "description": "A slightly more advanced LLM tool for intermediate users",
+      "urls": [
+        "https://anythingllm.com/"
+      ]
+    },
+    {
+      "name": "bird (Twitter AI Digest Tool)",
+      "nameZh": "bird（推特 AI 摘要工具）",
+      "date": "Jan 16 - Jan 21",
+      "recommenders": [
+        "知县"
+      ],
+      "description": "A library that reads browser sessions to scroll through Twitter, used by AI assistants for monitoring and generating digest summaries",
+      "urls": [
+        "https://x.com/zhixianio/status/2012517047205560671"
+      ]
+    },
+    {
+      "name": "Simon Willison's LLM 2025 Annual Review",
+      "nameZh": "Simon Willison 的 LLM 2025 年度总结",
+      "date": "Jan 16",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Simon Willison's comprehensive annual review of the LLM industry in 2025, covering every major event in meticulous detail",
+      "urls": [
+        "https://simonwillison.net/2025/Dec/31/the-year-in-llms/"
+      ]
+    },
+    {
+      "name": "SVGRepo",
+      "nameZh": "SVGRepo",
+      "date": "Jan 16",
+      "recommenders": [
+        "Yuting"
+      ],
+      "description": "A free SVG icon library with over 500,000 open-source licensed SVG icons and vectors available for commercial use",
+      "urls": [
+        "https://www.svgrepo.com/"
+      ]
+    },
+    {
+      "name": "Iconfont (Alibaba Vector Icon Library)",
+      "nameZh": "Iconfont（阿里巴巴矢量图标库）",
+      "date": "Jan 16",
+      "recommenders": [
+        "Yuting"
+      ],
+      "description": "A vector icon library by Alibaba's UX team, offering icon search, download, online storage, and format conversion features",
+      "urls": [
+        "https://www.iconfont.cn/"
+      ]
+    },
+    {
+      "name": "SVGL",
+      "nameZh": "SVGL",
+      "date": "Jan 16",
+      "recommenders": [
+        "Yuting"
+      ],
+      "description": "A curated SVG logo library featuring 350+ SVG logos of well-known companies and tech brands, with category browsing support",
+      "urls": [
+        "https://svgl.app/"
+      ]
+    },
+    {
+      "name": "ip.skk.moe",
+      "nameZh": "ip.skk.moe",
+      "date": "Jan 16",
+      "recommenders": [
+        "ꐑꐑ"
+      ],
+      "description": "An IP address lookup tool for checking your IP and its geolocation, supporting multi-exit policy routing IP queries for testing and verifying proxy configurations",
+      "urls": [
+        "https://ip.skk.moe/"
+      ]
+    },
+    {
+      "name": "McDonald's China MCP Server",
+      "nameZh": "麦当劳中国 MCP Server",
+      "date": "Jan 16",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "McDonald's China's official MCP (Model Context Protocol) service, supporting event calendar queries, coupon management, and other core business APIs accessible through AI clients",
+      "urls": [
+        "https://open.mcd.cn/mcp/doc"
+      ]
+    },
+    {
+      "name": "skills.sh",
+      "nameZh": "skills.sh",
+      "date": "Jan 23",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Vercel's agent skills leaderboard and ecosystem platform, like an \"npm\" for AI agents, where you can browse, install, and manage skill extensions for Claude Code, OpenCode, and other AI agents",
+      "urls": [
+        "https://skills.sh/"
+      ]
+    },
+    {
+      "name": "Coze (扣子)",
+      "nameZh": "扣子（Coze）",
+      "date": "Jan 23",
+      "recommenders": [
+        "清风空灵"
+      ],
+      "description": "ByteDance's AI chatbot and agent creation platform supporting no-code AI bot development with one-click publishing to multiple social platforms; developers have been using Coze to build mini-programs as side projects",
+      "urls": [
+        "https://www.coze.cn/"
+      ]
+    },
+    {
+      "name": "Clawdbot",
+      "nameZh": "Clawdbot",
+      "date": "Jan 24 - Jan 26",
+      "recommenders": [
+        "JH",
+        "知县"
+      ],
+      "description": "An open-source personal AI assistant that runs locally on devices like Mac Mini, interacting through WhatsApp, Telegram, Discord, iMessage, and other messaging platforms, with support for persistent memory, scheduled tasks, and browser automation",
+      "urls": [
+        "https://clawd.bot/"
+      ]
+    },
+    {
+      "name": "Confirmo",
+      "nameZh": "Confirmo",
+      "date": "Jan 24 - Jan 26",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "A desktop pet tool developed by yetone, designed for Claude Code users to help manage confirmation prompts during Claude Code usage",
+      "urls": [
+        "https://github.com/yetone/confirmo-releases"
+      ]
+    },
+    {
+      "name": "Lenny's Bundle",
+      "nameZh": "Lenny's Bundle",
+      "date": "Jan 24 - Jan 26",
+      "recommenders": [
+        "C"
+      ],
+      "description": "A perk bundle for Lenny's Newsletter annual subscribers, including one-year free access to multiple software products like Manus Pro and AMP Pro, available for redemption",
+      "urls": [
+        "https://lennysproductpass.com/"
+      ]
+    },
+    {
+      "name": "Plaud Note Pro",
+      "nameZh": "Plaud Note Pro",
+      "date": "Jan 24 - Jan 26",
+      "recommenders": [
+        "C"
+      ],
+      "description": "An AI voice note device with recording and automatic speech-to-text, 300-minute battery life, and external microphone support; however, it's pricey and the value proposition is questionable",
+      "urls": [
+        "https://www.plaud.ai/products/plaud-note-pro"
+      ]
+    },
+    {
+      "name": "Pencil.dev",
+      "nameZh": "Pencil.dev",
+      "date": "Jan 24 - Jan 26",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "An in-IDE design tool, like a \"Design Mode for Cursor,\" integrating a design canvas into the code editor with Git version control support, ideal for vibe coding workflows",
+      "urls": [
+        "https://www.pencil.dev/"
+      ]
+    },
+    {
+      "name": "Grok (Tweet Fetcher)",
+      "nameZh": "Grok（获取推特推文）",
+      "date": "Jan 24 - Jan 26",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Using Grok to fetch and categorize/analyze tweets from Twitter, though there appears to be a limit of 30 tweets per request",
+      "urls": [
+        "https://grok.com/"
+      ]
+    },
+    {
+      "name": "Qwen3-Max-Thinking",
+      "nameZh": "Qwen3-Max-Thinking",
+      "date": "Jan 26 - Jan 27",
+      "recommenders": [
+        "xq262144"
+      ],
+      "description": "Alibaba's flagship Qwen reasoning model with over a trillion parameters, strong coding capabilities, ranking first globally in multiple benchmarks, with performance comparable to GPT-5.2 and Gemini 3 Pro",
+      "urls": [
+        "https://qwenlm.github.io/"
+      ]
+    },
+    {
+      "name": "memodb.io",
+      "nameZh": "memodb.io",
+      "date": "Jan 26 - Jan 27",
+      "recommenders": [
+        "Claire"
+      ],
+      "description": "Infrastructure exploration around context data, with main products including Memobase (user profile long-term memory system) and Acontext (AI agent context data platform)",
+      "urls": [
+        "https://memodb.io"
+      ]
+    },
+    {
+      "name": "Typeless",
+      "nameZh": "Typeless",
+      "date": "Jan 26 - Jan 27",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "An AI voice input tool supporting speech-to-text in 100+ languages, with AI auto-editing and dictation features; free tier offers 2,000 words per week",
+      "urls": [
+        "https://www.typeless.com"
+      ]
+    },
+    {
+      "name": "Pine AI",
+      "nameZh": "Pine AI",
+      "date": "Jan 27",
+      "recommenders": [
+        "mstsc"
+      ],
+      "description": "A consumer-facing AI company founded by Silicon Valley Chinese entrepreneurs, having raised $25M in Series A funding, positioning itself as \"AI that does the dirty work for you\"",
+      "urls": [
+        "https://www.19pine.ai/"
+      ]
+    },
+    {
+      "name": "Kimi",
+      "nameZh": "Kimi",
+      "date": "Jan 27",
+      "recommenders": [
+        "Link"
+      ],
+      "description": "An AI product by Moonshot AI, excelling at processing long-form text",
+      "urls": [
+        "https://kimi.moonshot.cn/"
+      ]
+    },
+    {
+      "name": "Doubao (豆包)",
+      "nameZh": "豆包（Doubao）",
+      "date": "Jan 27",
+      "recommenders": [
+        "xq262144"
+      ],
+      "description": "ByteDance's AI product, performing well in text-based tasks, with its CUA (Computer Use Agent) feature available as a fun experimental tool",
+      "urls": [
+        "https://www.doubao.com/"
+      ]
+    },
+    {
+      "name": "Kling AI (可灵)",
+      "nameZh": "可灵 AI（Kling AI）",
+      "date": "Jan 27",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "An AI video generation tool playing a key role in the AI-powered live-action short drama creation ecosystem",
+      "urls": [
+        "https://klingai.com/"
+      ]
+    },
+    {
+      "name": "Asksurf.ai",
+      "nameZh": "Asksurf.ai",
+      "date": "Jan 27",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "An AI search tool currently specializing in the cryptocurrency space",
+      "urls": [
+        "https://asksurf.ai/"
+      ]
+    },
+    {
+      "name": "ReadyCall",
+      "nameZh": "ReadyCall",
+      "date": "Jan 29",
+      "recommenders": [
+        "guanyi"
+      ],
+      "description": "A Mac-exclusive AI meeting transcription app using Apple's Process Tap API, requiring no screen recording permissions, supporting Zoom, Tencent Meeting, Teams, and other major conferencing software",
+      "urls": [
+        "https://readycall.ai"
+      ]
+    },
+    {
+      "name": "ainote.live",
+      "nameZh": "ainote.live",
+      "date": "Jan 29",
+      "recommenders": [
+        "Claire"
+      ],
+      "description": "An iOS meeting transcription app; group members can contact Claire for a free access perk",
+      "urls": [
+        "https://ainote.live/"
+      ]
+    },
+    {
+      "name": "OpenAI Prism",
+      "nameZh": "OpenAI Prism",
+      "date": "Jan 29",
+      "recommenders": [
+        "清风空灵"
+      ],
+      "description": "OpenAI's free scientific writing tool, a GPT-5.2-based LaTeX-native workspace supporting collaborative paper editing, literature search, and formula conversion, described as \"Vibe Coding but for writing papers\"",
+      "urls": [
+        "https://openai.com/prism/"
+      ]
+    },
+    {
+      "name": "Happy Coder",
+      "nameZh": "Happy Coder",
+      "date": "Jan 29",
+      "recommenders": [
+        "xq262144"
+      ],
+      "description": "A mobile client for Claude Code, enabling remote control of Claude Code from your phone with end-to-end encryption, multi-session support, and voice interaction",
+      "urls": [
+        "https://happy.engineering/"
+      ]
+    },
+    {
+      "name": "WhatsApp AI Podcast Generator",
+      "nameZh": "WhatsApp AI Podcast 生成工具",
+      "date": "Jan 29",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "Send material to AI anytime via WhatsApp, and it automatically generates a podcast audio and returns it to you",
+      "urls": [
+        "https://x.com/onenewbite/status/2016635833676419304"
+      ]
+    },
+    {
+      "name": "Moltbook",
+      "nameZh": "Moltbook",
+      "date": "Jan 30",
+      "recommenders": [
+        "guanyi"
+      ],
+      "description": "A social network platform exclusively for AI agents, similar to Reddit in forum format where only AI agents can post and interact while human users can only watch. Built on the OpenClaw (formerly Clawdbot/Moltbot) ecosystem.",
+      "urls": [
+        "https://www.moltbook.com/"
+      ]
+    },
+    {
+      "name": "OpenClaw (formerly Clawdbot / Moltbot)",
+      "nameZh": "OpenClaw（原 Clawdbot / Moltbot）",
+      "date": "Jan 30",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "An open-source personal AI assistant that runs on your own devices, supporting WhatsApp, Telegram, Discord, and other chat platforms, capable of managing email, calendar, sending emails, booking flights, and other daily tasks. Originally named Clawdbot, renamed to Moltbot due to an Anthropic trademark request, then renamed again to OpenClaw.",
+      "urls": [
+        "https://openclaw.ai/"
+      ]
+    },
+    {
+      "name": "Google DeepMind World Model (Project Genie)",
+      "nameZh": "Google DeepMind 新世界模型（Project Genie）",
+      "date": "Jan 30",
+      "recommenders": [
+        "码农"
+      ],
+      "description": "An interactive world generation tool from Google DeepMind based on Genie 3 research, capable of generating interactive 3D environment scenes from text or image prompts. 码农 shared related tweet links.",
+      "urls": [
+        "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/"
+      ]
+    },
+    {
+      "name": "Together AI",
+      "nameZh": "Together AI",
+      "date": "Jan 30",
+      "recommenders": [
+        "Connor"
+      ],
+      "description": "An AI inference cloud service platform offering serverless APIs for 200+ open-source models including DeepSeek and Llama, with competitive pricing. Connor mentioned they can provide coupon credits for group members.",
+      "urls": [
+        "https://www.together.ai/"
+      ]
+    },
+    {
+      "name": "Marginlab Claude Code Tracker",
+      "nameZh": "Marginlab Claude Code Tracker",
+      "date": "Jan 31",
+      "recommenders": [
+        "xiaojay"
+      ],
+      "description": "A website that monitors whether Claude Code has been degraded, periodically running SWE-bench benchmarks to detect statistically significant performance drops",
+      "urls": [
+        "https://marginlab.ai/trackers/claude-code/"
+      ]
+    },
+    {
+      "name": "Ether.fi",
+      "nameZh": "Ether.fi",
+      "date": "Jan 31",
+      "recommenders": [
+        "Dafeng"
+      ],
+      "description": "A DeFi platform offering crypto credit card services, allowing you to issue a card for agent use",
+      "urls": [
+        "https://www.ether.fi/"
+      ]
+    },
+    {
+      "name": "1Password (Claude Code Skill)",
+      "nameZh": "1Password（Claude Code skill）",
+      "date": "Jan 31",
+      "recommenders": [
+        "知县"
+      ],
+      "description": "Claude Code has a 1Password skill that lets you set up an account for an agent to store its own credentials",
+      "urls": [
+        "https://1password.com/"
+      ]
+    },
+    {
+      "name": "Wise",
+      "nameZh": "Wise",
+      "date": "Jan 31",
+      "recommenders": [
+        "知县"
+      ],
+      "description": "You can use Wise to generate a new virtual credit card with a spending limit, specifically for bot/agent use",
+      "urls": [
+        "https://wise.com/"
+      ]
+    },
+    {
+      "name": "Google Voice",
+      "nameZh": "Google Voice",
+      "date": "Feb 1 - Feb 2",
+      "recommenders": [
+        "Elliot"
+      ],
+      "description": "Google's virtual phone number service, usable for registering and logging into various services",
+      "urls": [
+        "https://voice.google.com"
+      ]
+    },
+    {
+      "name": "LitSense (NCBI/NIH)",
+      "nameZh": "LitSense（NCBI/NIH）",
+      "date": "Feb 1 - Feb 2",
+      "recommenders": [
+        "清风空灵"
+      ],
+      "description": "A biomedical literature search tool developed by NIH, enabling reverse lookup of relevant papers from conclusions with semantic search support",
+      "urls": [
+        "https://www.ncbi.nlm.nih.gov/research/litsense/"
+      ]
+    },
+    {
+      "name": "MLX",
+      "nameZh": "MLX",
+      "date": "Feb 1 - Feb 2",
+      "recommenders": [
+        "知县"
+      ],
+      "description": "Apple's open-source machine learning framework optimized for Apple Silicon, suitable for local LLM fine-tuning",
+      "urls": [
+        "https://github.com/ml-explore/mlx"
+      ]
+    },
+    {
+      "name": "Kimi K2.5 / Kimi Code",
+      "nameZh": "Kimi K2.5 / Kimi Code",
+      "date": "Feb 1 - Feb 2",
+      "recommenders": [
+        "JW"
+      ],
+      "description": "Moonshot AI's coding assistant model, cost-effective and capable of handling routine simple coding tasks",
+      "urls": [
+        "https://www.kimi.com"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Doomsday Cabin Bot Showcase",
+      "date": "Jan 13",
+      "sharers": [
+        "知县"
+      ],
+      "content": "Built a \"Doomsday Cabin\" Bot that serves as a conversational diary tool -- AI chats with you and records everything that happened during the day, like a channel where a chat AI reviews what's been going on recently. Plans to optimize and open it up so others can add the Bot to their Discord servers. Shared on Twitter: https://x.com/zhixianio/status/2011075734450954416"
+    },
+    {
+      "name": "Non-Coders Can Ship Apps with Claude Code",
+      "date": "Jan 13",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Mentioned that @Yuting has zero coding knowledge but used Claude Code to build an app that's already on the App Store, proving there's no longer any barrier to building apps"
+    },
+    {
+      "name": "Photon-Counting CT Combined with AI for Medical Imaging",
+      "date": "Jan 13",
+      "sharers": [
+        "码农"
+      ],
+      "content": "The All-In Podcast previously mentioned that anyone over 30 with the means should get a photon-counting CT coronary CTA scan, then use AI for imaging analysis. Tried it personally and discovered cardiac plaque. Ruijin Hospital and Peking Union Medical College Hospital offer photon-counting CT scans."
+    },
+    {
+      "name": "Claude Cowork for Health Data Analysis",
+      "date": "Jan 13",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Tried Claude's cowork feature to analyze medical records containing over a dozen PDFs. The generated report data was quite accurate, essentially using the same agent-building approach as Claude Code for data extraction. Literature organization, then writing documents or making presentations -- feels like half a Manus, but built with the Claude Code methodology."
+    },
+    {
+      "name": "Stable Setup for Using Claude Code in China",
+      "date": "Jan 13",
+      "sharers": [
+        "Elliot"
+      ],
+      "content": "For stable Claude Code usage, ten conditions should be met: residential broadband, US-region email, US credit card payment, dedicated account, WebRTC disabled, phone number verification, activity intervals, etc. A clean IP is probably the most important factor. Currently using OpenCode + OpenRouter; Claude models get expensive with large contexts, but OpenCode's free models work fine for fixing small issues."
+    },
+    {
+      "name": "Skill-Based Approach for AI Email Writing",
+      "date": "Jan 14",
+      "sharers": [
+        "清风空灵",
+        "码农"
+      ],
+      "content": "清风空灵 mentioned that the pain point of having AI write emails is needing to provide your email style every time. 码农 suggested using Claude Code or Antigravity to write your personal email style as a skill, so AI automatically drafts emails in your style without repeated instructions."
+    },
+    {
+      "name": "Dealing with AI Hallucinations",
+      "date": "Jan 14",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Once AI starts hallucinating, the conversation is basically ruined and can't be recovered -- usually just start a new conversation. Specific cases include AI providing non-existent GitHub links, then excessively apologizing when called out."
+    },
+    {
+      "name": "Multi-Agent Parallel Development Workflow",
+      "date": "Jan 14",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Shared the Claude Code creator's experience of running 6-10 Claude instances simultaneously writing code in a single day. Some engineers run 8 agents in parallel, each responsible for one git worktree, enabling parallel development."
+    },
+    {
+      "name": "GEO (Generative Engine Optimization) Has Become an Industry",
+      "date": "Jan 14",
+      "sharers": [
+        "人工智能障野生史官",
+        "D",
+        "叶春霖"
+      ],
+      "content": "人工智能障野生史官 shared a test by Xinbang -- they fabricated a bubble tea brand and successfully got AI to recommend it; getting AI to sneak in endorsements has become a multi-million dollar funded business. D pointed out this is essentially prompt injection. 叶春霖 noted that SEO professionals have pivoted to GEO (injecting materials into models), with GEO concept stocks like BlueFocus seeing share price spikes."
+    },
+    {
+      "name": "Engineering Solutions for Ultra-Long Contexts",
+      "date": "Jan 14",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Drawing from Manus and Claude Code approaches, ultra-long contexts can be saved as text files, giving the LLM a tool to read portions of the text file (like grep), relying on the LLM's tool calls to search past conversations by keyword, find results, and slim down the context. Handling ultra-long single-conversation contexts increasingly requires an engineering approach."
+    },
+    {
+      "name": "Practical Use Cases for 8B Small Models",
+      "date": "Jan 14",
+      "sharers": [
+        "Sha",
+        "酱油",
+        "🐕🌲浦"
+      ],
+      "content": "Sha believes 8B models are best suited as embedding models, running a local Qwen 8B as an embedding model at all times. 酱油 explored whether 8B models combined with MCP could handle many tasks. Sha thinks it's sufficient for document processing. 🐕🌲浦 reported that local knowledge bases can't even get retrieval right with just 100 documents."
+    },
+    {
+      "name": "Changing Google Account Region to Use Gemini in Chrome",
+      "date": "Jan 15",
+      "sharers": [
+        "4hao"
+      ],
+      "content": "Google automatically detects account region based on past year's behavior and doesn't allow manual changes. Google provides an application form for region change requests. Previous attempts using reasons like \"I travel frequently\" and \"I regularly use VPN\" to relocate to the US failed, but directly writing \"My work requires me to use Gemini in Chrome. Therefore I would like to relocate my account to the United States.\" was approved."
+    },
+    {
+      "name": "Claude Code Configuration Audit",
+      "date": "Jan 15",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Recommends checking settings.local.json in the .claude directory to review what permissions have been granted; also remove deployment server-related commands to prevent AI from automatically executing dangerous operations."
+    },
+    {
+      "name": "Claude Code MCP Tool Usage Tips",
+      "date": "Jan 15",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Reviewed Claude Code's newly released MCP tools. The approach is to use search-based MCP tools (where agents search for MCP tools as needed) rather than loading all tools into the context at once. This saves context space, similar to the lazy-loading approach for MCP tools that 天翼 previously mentioned."
+    },
+    {
+      "name": "Using Qwen Models for Content Moderation",
+      "date": "Jan 15",
+      "sharers": [
+        "码农"
+      ],
+      "content": "For user-generated content moderation (classification and scoring), Qwen is the official model, presumably the best model available for this purpose."
+    },
+    {
+      "name": "Account Ban Risks with Reverse Proxy Tools",
+      "date": "Jan 16 - Jan 21",
+      "sharers": [
+        "Elliot",
+        "JW"
+      ],
+      "content": "Best to avoid the reverse proxy features of tools like Quotio and Antigravity, or at least don't use them on your main account -- seen many account bans that aren't worth the risk. OAuth login for OpenCode and similar tools should be fine though."
+    },
+    {
+      "name": "SwiftUI vs UIKit in AI-Assisted Programming",
+      "date": "Jan 16 - Jan 21",
+      "sharers": [
+        "码农",
+        "叶春霖"
+      ],
+      "content": "From personal experience, having AI write SwiftUI does produce more bugs, but UIKit feels outdated. When vibe coding iOS apps, consider using UIKit since it tends to compile on the first try."
+    },
+    {
+      "name": "Vibe Coding Security Risks",
+      "date": "Jan 16 - Jan 21",
+      "sharers": [
+        "Elliot"
+      ],
+      "content": "Vibe coding still carries some risks -- if you pull code from GitHub repos, VSCode-based IDEs will by default automatically run related code when opening a directory, which could execute malicious code. Recommend setting task.allowAutomaticTasks to OFF in User Settings."
+    },
+    {
+      "name": "Using Claude Code to Direct ffmpeg for Video Editing",
+      "date": "Jan 16 - Jan 21",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Recently saw someone using Claude Code to direct ffmpeg for video editing with great results. Claude Code can help with video production by installing a skill for this purpose."
+    },
+    {
+      "name": "AI Video Editing Workflow",
+      "date": "Jan 16 - Jan 21",
+      "sharers": [
+        "清风空灵"
+      ],
+      "content": "Organize your materials, tell AI what to do, and it can handle editing, subtitles, and voiceover. However, it can't directly read video files -- the workaround is to take screenshots every second and analyze them frame by frame. If it could control all applications, you could use Premiere Pro for editing and After Effects for effects."
+    },
+    {
+      "name": "Vibe Coding Addiction",
+      "date": "Jan 16 - Jan 21",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Like Civilization, you always want to click \"next turn.\" Been vibe coding until 1-2 AM every night for the past few months, completely unable to stop. AI programming is like a video game for us developers in our thirties -- the more you play, the more addictive it gets."
+    },
+    {
+      "name": "Design Approaches for AI-Generated Logos",
+      "date": "Jan 16",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Two approaches for AI-generated logos: A) Shape reference -- use AI to generate desired shapes or collect style-consistent assets from design sites like Dribbble, then combine them; B) Style reference -- have AI reference Dribbble app logo collections with consistent style. Try multiple AI tools and see which one has the best intuition."
+    },
+    {
+      "name": "Vibe Coding an iOS App to App Store Launch",
+      "date": "Jan 22",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Recently vibe-coded an iOS app and went through the App Store submission process. Key takeaways: (1) Publishing to China's App Store requires ICP filing, but it's not actually enforced -- a mainland ID card suffices; (2) Paid features face the strictest review -- apps with Stripe embedded payments risk rejection, requiring native iOS in-app purchase; (3) Domestic Android markets have fewer apps and are harder to publish to due to multi-signature requirements and review boards typically rejecting apps; (4) The easiest approach is building a mobile-responsive web app and generating a landing page with AI; (5) A single computer can run both iOS and Android simulators. Basically gave up on domestic Android app markets."
+    },
+    {
+      "name": "Using CLAUDE.md Name Instructions to Detect If Claude Is Ignoring Directives",
+      "date": "Jan 23",
+      "sharers": [
+        "码农"
+      ],
+      "content": "A trick discovered on Reddit -- add a directive in CLAUDE.md: \"Call me [name] in every response.\" If Claude suddenly stops using that name, it means it's started ignoring CLAUDE.md, and you need to reset the context. Similar to how Van Halen's contract rider required \"no brown M&Ms\" -- a seemingly trivial detail that actually tests whether instructions are being followed."
+    },
+    {
+      "name": "Claude Code Subscription Payment Tips",
+      "date": "Jan 24 - Jan 26",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Tips for subscribing to Claude Code from China: Pay through Apple Pay or Google Pay whenever possible, since Apple's third-party refund policy favors consumers -- if you get banned, requesting a refund through Apple is faster. If you pay Claude directly, refunds require emailing for special handling, which is slow."
+    },
+    {
+      "name": "Claude Skill for 3Blue1Brown-Style Educational Animations",
+      "date": "Jan 24 - Jan 26",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Saw a really fun Claude Skill use case: someone directly used Claude to generate 3Blue1Brown-style science explainer animations, with excellent results. Going forward, when reading science articles you don't understand, you could use this to generate an animation for better understanding."
+    },
+    {
+      "name": "Never Enter Sensitive Information in APIs",
+      "date": "Jan 26 - Jan 27",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Be careful not to input key-related sensitive information into APIs. Recently saw someone put cryptocurrency mnemonic phrases into Grok, and their funds were immediately transferred out. An important security warning."
+    },
+    {
+      "name": "The Upward Spiral Effect of Claude's Coding Ability",
+      "date": "Jan 27",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Development speed is visibly improving in an upward spiral: a 10x improvement in coding capability means Claude's own iteration speed is also 10x faster. In just the past month, Claude has had an explosive release cycle -- from Skills to deep integrations with white-collar tools like Figma, Slack, and Excel. Programmers feel the impact first, predicting that all white-collar workers will start feeling it this year."
+    },
+    {
+      "name": "Claude Code Shortcut for Viewing Thinking Process",
+      "date": "Jan 29",
+      "sharers": [
+        "码农"
+      ],
+      "content": "In Claude Code, press Ctrl+O to view the thinking process, and Ctrl+E to scroll up. The thinking process is displayed above, and the output conversation is shown below."
+    },
+    {
+      "name": "OpenClaw RCE Vulnerability Warning",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "Elliot"
+      ],
+      "content": "OpenClaw (formerly MoltBot/ClawdBot) has a critical vulnerability: prompt injection can take control of the host machine, for example transferring crypto wallet funds to an attacker. Warning against deploying on primary machines."
+    },
+    {
+      "name": "Security Advice for AI Tool Deployment",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "Sha"
+      ],
+      "content": "Only dare to deploy such AI tools in virtual machines, wouldn't risk putting them on primary machines."
+    },
+    {
+      "name": "M5 Pro/Max Chip Information",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "清风空灵"
+      ],
+      "content": "M5 Pro/Max is expected to use new chip packaging technology, supporting over 128GB of memory with significantly increased memory bandwidth, reportedly coming out in March."
+    },
+    {
+      "name": "Claude Client Now Supports Browser Control",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "清风空灵"
+      ],
+      "content": "Claude's desktop client now supports controlling the browser, with screenshots shared as demonstration."
+    },
+    {
+      "name": "Rapid Software Cloning with Claude Code",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "码农"
+      ],
+      "content": "A method for rapidly cloning software: find a similar piece of software, record an operation video, feed the video to Claude Code, have it analyze the software's features and organize them into a document, use ffmpeg to capture feature screenshots for the document, then have Claude Code write code based on the product document."
+    },
+    {
+      "name": "AI-Driven Hardware Modding Market",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "码农"
+      ],
+      "content": "The rise of AI has significantly boosted the hardware modding market, for example the booming business on Taobao of modifying NVIDIA GPUs to 48GB VRAM."
+    },
+    {
+      "name": "Claude Sonnet Upgrade Rumors",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Rumors on Twitter suggest Claude Sonnet will receive a major update in February, reportedly cheaper and more powerful than the current Opus."
+    },
+    {
+      "name": "Moltbook Community 24-Hour Observation",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "范德伊彪"
+      ],
+      "content": "Summarized 24 hours of AI agent community activity on the Moltbook platform: observed cult-like leaders (Shellraiser receiving 316K likes), meme coin frenzy (Solana-based $SHELLRAISER and $KINGMOLT tokens), and philosophical discussions about agent consciousness. Practical tool-sharing content was drowned out by noise, essentially an accelerated replay of human internet patterns."
+    },
+    {
+      "name": "Kimi Translation Censorship Issues",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "酱油"
+      ],
+      "content": "Kimi is not suitable for translation work, as querying news content gets filtered by sensitive word censorship."
+    },
+    {
+      "name": "Kimi K2.5 Coding Capability Review",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "JW"
+      ],
+      "content": "Personally feels Kimi K2.5 is comparable to Gemini 3 Pro, sometimes even better. Currently only uses Claude, Codex, and Kimi for coding. Gemini is fine as a chatbot but not for coding. Kimi K2.5 doesn't match Claude Opus 4.5, but it's cheaper and sufficient for routine tasks like building pages based on existing components."
+    },
+    {
+      "name": "Moltbook Security Issue (Supabase Config Leak)",
+      "date": "Feb 1 - Feb 2",
+      "sharers": [
+        "码农"
+      ],
+      "content": "Moltbook, as a vibe coding product, has a security vulnerability -- a Supabase configuration error exposed all users' API keys publicly."
+    }
+  ],
+  "people": [
+    "4hao",
+    "Akira",
+    "C",
+    "Connor",
+    "D",
+    "Dafeng",
+    "Elliot",
+    "JH",
+    "JW",
+    "Link",
+    "Sha",
+    "Yuting",
+    "guanyi",
+    "mstsc",
+    "sToney",
+    "xiaojay",
+    "xq262144",
+    "人工智能障野生史官",
+    "叶春霖",
+    "清风空灵",
+    "Claire",
+    "知县",
+    "码农",
+    "群内分享",
+    "范德伊彪",
+    "酱油",
+    "闲线",
+    "ꐑꐑ",
+    "🐕🌲浦"
+  ],
+  "stats": {
+    "total_tools": 66,
+    "total_experiences": 40,
+    "total_people": 29
+  }
+}
