@@ -148,6 +148,13 @@
             <i data-lucide="users" class="w-4 h-4"></i>
             群友项目 <span id="tab-projects-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
           </button>
+          <button
+            id="sort-btn"
+            class="ml-auto flex items-center gap-1.5 px-3 py-2 text-xs text-muted hover:text-text cursor-pointer transition-colors min-h-[44px] whitespace-nowrap"
+            title="按时间排序"
+          >
+            <span id="sort-label">时间顺序 ↓</span>
+          </button>
         </div>
       </div>
     </section>
@@ -190,6 +197,7 @@
       activeTab: 'tools',
       searchQuery: '',
       selectedPerson: null,
+      sortOrder: 'desc', // 'asc' = oldest first, 'desc' = newest first
     };
 
     // --- DOM refs ---
@@ -204,6 +212,8 @@
     const contentGrid = document.getElementById('content-grid');
     const emptyState = document.getElementById('empty-state');
     const clearAllBtn = document.getElementById('clear-all-btn');
+    const sortBtn = document.getElementById('sort-btn');
+    const sortLabel = document.getElementById('sort-label');
 
     // --- Utilities ---
     function escapeHTML(str) {
@@ -235,6 +245,22 @@
         clearTimeout(timer);
         timer = setTimeout(() => fn.apply(this, args), ms);
       };
+    }
+
+    function parseDate(dateStr) {
+      if (!dateStr) return 0;
+      const match = dateStr.match(/(\d+)月(\d+)日/);
+      if (!match) return 0;
+      return parseInt(match[1]) * 100 + parseInt(match[2]);
+    }
+
+    function sortByDate(items) {
+      const sorted = items.slice().sort((a, b) => {
+        const da = parseDate(a.date);
+        const db = parseDate(b.date);
+        return state.sortOrder === 'asc' ? da - db : db - da;
+      });
+      return sorted;
     }
 
     // --- Filtering ---
@@ -379,9 +405,24 @@
 
       renderTabs(filteredTools, filteredExperiences, filteredProjects);
 
+      // Update sort button visibility
+      if (state.activeTab === 'projects') {
+        sortBtn.classList.add('hidden');
+      } else {
+        sortBtn.classList.remove('hidden');
+        if (state.sortOrder === 'asc') {
+          sortLabel.textContent = '时间顺序 ↑';
+          sortBtn.title = '当前：从旧到新';
+        } else {
+          sortLabel.textContent = '时间顺序 ↓';
+          sortBtn.title = '当前：从新到旧';
+        }
+        if (window.lucide) lucide.createIcons({ nodes: [sortBtn] });
+      }
+
       let items;
-      if (state.activeTab === 'tools') items = filteredTools;
-      else if (state.activeTab === 'experiences') items = filteredExperiences;
+      if (state.activeTab === 'tools') items = sortByDate(filteredTools);
+      else if (state.activeTab === 'experiences') items = sortByDate(filteredExperiences);
       else items = filteredProjects;
 
       if (items.length === 0) {
@@ -468,10 +509,16 @@
       renderContent();
     });
 
+    sortBtn.addEventListener('click', () => {
+      state.sortOrder = state.sortOrder === 'desc' ? 'asc' : 'desc';
+      renderContent();
+    });
+
     clearAllBtn.addEventListener('click', () => {
       searchInput.value = '';
       state.searchQuery = '';
       state.selectedPerson = null;
+      state.sortOrder = 'desc';
       searchClear.classList.add('hidden');
       renderContent();
     });
