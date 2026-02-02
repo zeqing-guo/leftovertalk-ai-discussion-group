@@ -1,0 +1,30 @@
+[
+  {
+    "toolName": "Tiimer",
+    "author": "Yuting",
+    "url": "https://apps.apple.com/us/app/tiimer/id6754963701",
+    "perk": "私信 Yuting 免费使用",
+    "perkType": "free_access"
+  },
+  {
+    "toolName": "ainote.live",
+    "author": "Claire",
+    "url": "https://ainote.live/",
+    "perk": "私信Claire免费使用",
+    "perkType": "free_access"
+  },
+  {
+    "toolName": "Together AI",
+    "author": "Connor",
+    "url": "https://www.together.ai/",
+    "perk": "Connor 可以给群友加 coupon credits",
+    "perkType": "coupon"
+  },
+  {
+    "toolName": "ReadyCall",
+    "author": "guanyi",
+    "url": "https://readycall.ai",
+    "perk": null,
+    "perkType": null
+  }
+]

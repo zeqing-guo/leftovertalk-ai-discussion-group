@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="边角聊 AI 讨论组 - 社区成员分享的 AI 工具与经验">
+  <title>边角聊 AI 讨论组</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Fira Code', 'monospace'],
+            body: ['Fira Sans', 'sans-serif'],
+          },
+          colors: {
+            primary: '#475569',
+            cta: '#2563EB',
+            'cta-hover': '#1D4ED8',
+            background: '#F8FAFC',
+            text: '#1E293B',
+            muted: '#64748B',
+            border: '#E2E8F0',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <style>
+    body { font-family: 'Fira Sans', sans-serif; }
+    h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Fira Code', monospace; }
+
+    /* Line clamp */
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Search highlight */
+    mark {
+      background-color: #FEF08A;
+      color: inherit;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+
+    /* Focus visible */
+    *:focus-visible {
+      outline: 2px solid #2563EB;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* Touch targets */
+    a, button { touch-action: manipulation; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+  </style>
+</head>
+<body class="bg-background text-text antialiased">
+
+  <!-- Sticky Header -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border transition-shadow px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto h-14 flex items-center gap-4">
+      <a href="#" class="flex items-center"><img src="./logo.png" alt="边角聊 AI 讨论组" class="h-8 w-8 rounded"></a>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3 mr-2">
+        <a href="https://github.com/zeqing-guo/leftovertalk-ai-discussion-group" target="_blank" rel="noopener" class="text-text" aria-label="GitHub">
+          <img src="./Octicons-mark-github.svg" alt="GitHub" class="w-5 h-5">
+        </a>
+        <a href="https://x.com/ZQInTheShell" target="_blank" rel="noopener" class="text-text" aria-label="X (Twitter)">
+          <img src="./x-logo.svg" alt="X" class="w-4 h-4">
+        </a>
+      </div>
+      <div class="relative w-48 sm:w-64">
+        <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted pointer-events-none"></i>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="搜索分享、成员..."
+          class="w-full pl-9 pr-8 py-2 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-cta focus:border-transparent"
+        >
+        <button id="search-clear" class="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center text-muted hover:text-text cursor-pointer hidden" aria-label="清除搜索">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="px-4 sm:px-6 pt-10 pb-6">
+      <div class="max-w-5xl mx-auto">
+        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-text mb-3">边角聊 AI 讨论组</h1>
+        <p class="text-muted text-base sm:text-lg">群友们共同整理的 AI 工具推荐与一线使用经验。欢迎在推特关注和联系码农（<a href="https://x.com/ZQInTheShell" target="_blank" rel="noopener">@ZQInTheShell <i data-lucide="external-link" class="w-3 h-3 inline" style="vertical-align: -0.05em;"></i></a>）申请加入讨论组。</p>
+      </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <section class="px-4 sm:px-6 pb-2">
+      <div class="max-w-5xl mx-auto">
+        <div role="tablist" class="flex gap-0 border-b border-border">
+          <button
+            id="tab-tools"
+            role="tab"
+            aria-selected="true"
+            class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-cta text-cta min-h-[44px]"
+          >
+            <i data-lucide="wrench" class="w-4 h-4"></i>
+            工具 <span id="tab-tools-count" class="text-xs bg-cta/10 text-cta px-1.5 py-0.5 rounded-full"></span>
+          </button>
+          <button
+            id="tab-experiences"
+            role="tab"
+            aria-selected="false"
+            class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-transparent text-muted hover:text-text min-h-[44px]"
+          >
+            <i data-lucide="lightbulb" class="w-4 h-4"></i>
+            经验 <span id="tab-experiences-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
+          </button>
+          <button
+            id="tab-projects"
+            role="tab"
+            aria-selected="false"
+            class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-transparent text-muted hover:text-text min-h-[44px]"
+          >
+            <i data-lucide="users" class="w-4 h-4"></i>
+            群友项目 <span id="tab-projects-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <section class="px-4 sm:px-6 py-6">
+      <div class="max-w-5xl mx-auto">
+        <div id="content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-16">
+          <i data-lucide="search-x" class="w-12 h-12 text-muted mx-auto mb-4"></i>
+          <h3 class="font-heading text-lg font-semibold text-text mb-2">没有找到结果</h3>
+          <p class="text-muted text-sm mb-6">试试调整搜索关键词或筛选条件。</p>
+          <button id="clear-all-btn" class="bg-cta text-white px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer hover:bg-cta-hover transition-colors min-h-[44px]">
+            清除所有筛选
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-border py-6 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto text-center text-muted text-sm">
+      边角聊 AI 讨论组 &middot; 社区知识库
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // --- State ---
+    const state = {
+      data: null,
+      projects: null,
+      activeTab: 'tools',
+      searchQuery: '',
+      selectedPerson: null,
+    };
+
+    // --- DOM refs ---
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    const tabTools = document.getElementById('tab-tools');
+    const tabExperiences = document.getElementById('tab-experiences');
+    const tabProjects = document.getElementById('tab-projects');
+    const tabToolsCount = document.getElementById('tab-tools-count');
+    const tabExperiencesCount = document.getElementById('tab-experiences-count');
+    const tabProjectsCount = document.getElementById('tab-projects-count');
+    const contentGrid = document.getElementById('content-grid');
+    const emptyState = document.getElementById('empty-state');
+    const clearAllBtn = document.getElementById('clear-all-btn');
+
+    // --- Utilities ---
+    function escapeHTML(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function highlightText(text, query) {
+      if (!query) return escapeHTML(text);
+      const escaped = escapeHTML(text);
+      const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const re = new RegExp('(' + escapedQuery + ')', 'gi');
+      return escaped.replace(re, '<mark>$1</mark>');
+    }
+
+    function extractDomain(url) {
+      try {
+        const u = new URL(url);
+        return u.hostname.replace(/^www\./, '');
+      } catch {
+        return url;
+      }
+    }
+
+    function debounce(fn, ms) {
+      let timer;
+      return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), ms);
+      };
+    }
+
+    // --- Filtering ---
+    function filterItems(items, type) {
+      const q = state.searchQuery.toLowerCase();
+      const person = state.selectedPerson;
+      return items.filter(item => {
+        if (person) {
+          const people = type === 'tools' ? item.recommenders : item.sharers;
+          if (!people || !people.includes(person)) return false;
+        }
+        if (q) {
+          const name = (item.name || '').toLowerCase();
+          const desc = (item.description || item.content || '').toLowerCase();
+          const people = (type === 'tools' ? item.recommenders : item.sharers) || [];
+          const peopleStr = people.join(' ').toLowerCase();
+          if (!name.includes(q) && !desc.includes(q) && !peopleStr.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function filterProjects(items) {
+      const q = state.searchQuery.toLowerCase();
+      const person = state.selectedPerson;
+      return items.filter(item => {
+        if (person) {
+          if (item.author !== person) return false;
+        }
+        if (q) {
+          const name = (item.toolName || '').toLowerCase();
+          const desc = (item.description || '').toLowerCase();
+          const author = (item.author || '').toLowerCase();
+          const perk = (item.perk || '').toLowerCase();
+          if (!name.includes(q) && !desc.includes(q) && !author.includes(q) && !perk.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    // --- Render ---
+    function renderTabs(filteredTools, filteredExperiences, filteredProjects) {
+      const active = state.activeTab;
+      const baseClass = 'tab-btn flex items-center gap-2 px-3 sm:px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] min-h-[44px]';
+      const activeClass = 'border-cta text-cta';
+      const inactiveClass = 'border-transparent text-muted hover:text-text';
+
+      tabTools.className = `${baseClass} ${active === 'tools' ? activeClass : inactiveClass}`;
+      tabTools.setAttribute('aria-selected', active === 'tools');
+      tabExperiences.className = `${baseClass} ${active === 'experiences' ? activeClass : inactiveClass}`;
+      tabExperiences.setAttribute('aria-selected', active === 'experiences');
+      tabProjects.className = `${baseClass} ${active === 'projects' ? activeClass : inactiveClass}`;
+      tabProjects.setAttribute('aria-selected', active === 'projects');
+
+      const activeCountClass = 'text-xs px-1.5 py-0.5 rounded-full bg-cta/10 text-cta';
+      const inactiveCountClass = 'text-xs px-1.5 py-0.5 rounded-full bg-gray-100 text-muted';
+
+      tabToolsCount.textContent = filteredTools.length;
+      tabToolsCount.className = active === 'tools' ? activeCountClass : inactiveCountClass;
+      tabExperiencesCount.textContent = filteredExperiences.length;
+      tabExperiencesCount.className = active === 'experiences' ? activeCountClass : inactiveCountClass;
+      tabProjectsCount.textContent = filteredProjects.length;
+      tabProjectsCount.className = active === 'projects' ? activeCountClass : inactiveCountClass;
+    }
+
+    function renderToolCard(item) {
+      const q = state.searchQuery;
+      const name = highlightText(item.name, q);
+      const desc = highlightText(item.description || '', q);
+      const recommenders = (item.recommenders || []).map(r =>
+        `<button data-person="${escapeHTML(r)}" class="inline-person-chip px-2 py-0.5 rounded-full text-xs font-medium cursor-pointer transition-colors ${state.selectedPerson === r ? 'bg-cta text-white' : 'bg-blue-50 text-cta hover:bg-blue-100'}">${highlightText(r, q)}</button>`
+      ).join('');
+      const urls = (item.urls || []).map(u =>
+        `<a href="${escapeHTML(u)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-cta hover:underline min-h-[28px]"><i data-lucide="external-link" class="w-3 h-3"></i>${escapeHTML(extractDomain(u))}</a>`
+      ).join(' ');
+
+      const mp = state.memberProjectByName && state.memberProjectByName[item.name];
+      const memberBadge = mp ? '<span class="text-xs font-medium bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded-full whitespace-nowrap">群友作品</span>' : '';
+      const perkHTML = mp && mp.perk ? `<div class="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mt-3"><i data-lucide="gift" class="w-4 h-4 text-amber-600 flex-shrink-0"></i><span class="text-xs text-amber-800">${highlightText(mp.perk, q)}</span></div>` : '';
+
+      return `<article class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow relative">
+        <div class="flex items-start justify-between gap-2 mb-2">
+          <h3 class="font-heading text-sm font-semibold leading-snug">${name}</h3>
+          <div class="flex items-center gap-2 flex-shrink-0">${memberBadge}<span class="text-xs text-muted whitespace-nowrap">${escapeHTML(item.date || '')}</span></div>
+        </div>
+        <div class="flex flex-wrap gap-1.5 mb-3">${recommenders}</div>
+        <p class="text-sm text-muted leading-relaxed mb-3">${desc}</p>
+        ${urls ? `<div class="flex flex-wrap gap-3">${urls}</div>` : ''}
+        ${perkHTML}
+      </article>`;
+    }
+
+    function renderExperienceCard(item) {
+      const q = state.searchQuery;
+      const name = highlightText(item.name, q);
+      const content = item.content || '';
+      const isLong = content.length > 150;
+      const contentHTML = highlightText(content, q);
+      const sharers = (item.sharers || []).map(s =>
+        `<button data-person="${escapeHTML(s)}" class="inline-person-chip px-2 py-0.5 rounded-full text-xs font-medium cursor-pointer transition-colors ${state.selectedPerson === s ? 'bg-cta text-white' : 'bg-green-50 text-green-700 hover:bg-green-100'}">${highlightText(s, q)}</button>`
+      ).join('');
+
+      return `<article class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between gap-2 mb-2">
+          <h3 class="font-heading text-sm font-semibold leading-snug">${name}</h3>
+          <span class="text-xs text-muted whitespace-nowrap flex-shrink-0">${escapeHTML(item.date || '')}</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5 mb-3">${sharers}</div>
+        <div class="exp-content-wrapper">
+          <p class="exp-content text-sm text-muted leading-relaxed ${isLong ? 'line-clamp-3' : ''}">${contentHTML}</p>
+          ${isLong ? `<button class="expand-btn text-xs text-cta font-medium mt-2 cursor-pointer hover:underline min-h-[28px]">展开全文</button>` : ''}
+        </div>
+      </article>`;
+    }
+
+    function renderProjectCard(item) {
+      const q = state.searchQuery;
+      const name = highlightText(item.toolName, q);
+      const desc = highlightText(item.description || '', q);
+      const authorChip = `<button data-person="${escapeHTML(item.author)}" class="inline-person-chip px-2 py-0.5 rounded-full text-xs font-medium cursor-pointer transition-colors ${state.selectedPerson === item.author ? 'bg-purple-600 text-white' : 'bg-purple-50 text-purple-700 hover:bg-purple-100'}">${highlightText(item.author, q)}</button>`;
+      const perkHTML = item.perk ? `<div class="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mt-3"><i data-lucide="gift" class="w-4 h-4 text-amber-600 flex-shrink-0"></i><span class="text-xs text-amber-800">${highlightText(item.perk, q)}</span></div>` : '';
+      const urlHTML = item.url ? `<a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-cta hover:underline min-h-[28px]"><i data-lucide="external-link" class="w-3 h-3"></i>${escapeHTML(extractDomain(item.url))}</a>` : '';
+
+      return `<article class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between gap-2 mb-2">
+          <h3 class="font-heading text-sm font-semibold leading-snug">${name}</h3>
+          <span class="text-xs font-medium bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">群友作品</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5 mb-3">${authorChip}</div>
+        <p class="text-sm text-muted leading-relaxed mb-3">${desc}</p>
+        ${urlHTML ? `<div class="flex flex-wrap gap-3">${urlHTML}</div>` : ''}
+        ${perkHTML}
+      </article>`;
+    }
+
+    function renderContent() {
+      if (!state.data) return;
+
+      const filteredTools = filterItems(state.data.tools || [], 'tools');
+      const filteredExperiences = filterItems(state.data.experiences || [], 'experiences');
+      const filteredProjects = filterProjects(state.projects || []);
+
+      renderTabs(filteredTools, filteredExperiences, filteredProjects);
+
+      let items;
+      if (state.activeTab === 'tools') items = filteredTools;
+      else if (state.activeTab === 'experiences') items = filteredExperiences;
+      else items = filteredProjects;
+
+      if (items.length === 0) {
+        contentGrid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+      } else {
+        contentGrid.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+
+        if (state.activeTab === 'tools') {
+          contentGrid.innerHTML = items.map(renderToolCard).join('');
+        } else if (state.activeTab === 'experiences') {
+          contentGrid.innerHTML = items.map(renderExperienceCard).join('');
+        } else {
+          contentGrid.innerHTML = items.map(renderProjectCard).join('');
+        }
+
+        // Attach inline person chip clicks
+        contentGrid.querySelectorAll('.inline-person-chip').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const p = btn.dataset.person;
+            if (state.selectedPerson === p) {
+              state.selectedPerson = null;
+            } else {
+              state.selectedPerson = p;
+            }
+            renderContent();
+          });
+        });
+
+        // Attach expand/collapse for experiences
+        contentGrid.querySelectorAll('.expand-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const wrapper = btn.closest('.exp-content-wrapper');
+            const contentEl = wrapper.querySelector('.exp-content');
+            const isExpanded = !contentEl.classList.contains('line-clamp-3');
+            if (isExpanded) {
+              contentEl.classList.add('line-clamp-3');
+              btn.textContent = '展开全文';
+            } else {
+              contentEl.classList.remove('line-clamp-3');
+              btn.textContent = '收起';
+            }
+          });
+        });
+      }
+
+      // Re-init Lucide icons for newly rendered content
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // --- Events ---
+    const debouncedSearch = debounce(() => {
+      state.searchQuery = searchInput.value.trim();
+      searchClear.classList.toggle('hidden', !state.searchQuery);
+      renderContent();
+    }, 250);
+
+    searchInput.addEventListener('input', debouncedSearch);
+
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      state.searchQuery = '';
+      searchClear.classList.add('hidden');
+      renderContent();
+      searchInput.focus();
+    });
+
+    tabTools.addEventListener('click', () => {
+      if (state.activeTab === 'tools') return;
+      state.activeTab = 'tools';
+      renderContent();
+    });
+
+    tabExperiences.addEventListener('click', () => {
+      if (state.activeTab === 'experiences') return;
+      state.activeTab = 'experiences';
+      renderContent();
+    });
+
+    tabProjects.addEventListener('click', () => {
+      if (state.activeTab === 'projects') return;
+      state.activeTab = 'projects';
+      renderContent();
+    });
+
+    clearAllBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      state.searchQuery = '';
+      state.selectedPerson = null;
+      searchClear.classList.add('hidden');
+      renderContent();
+    });
+
+    // Shadow on header scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (window.scrollY > 10) {
+        header.classList.add('shadow-sm');
+      } else {
+        header.classList.remove('shadow-sm');
+      }
+    });
+
+    // --- Init ---
+    Promise.all([
+      fetch('./data.json').then(r => r.json()),
+      fetch('./member-projects.json').then(r => r.json()),
+    ])
+      .then(([data, projects]) => {
+        state.data = data;
+        // Build toolName->tool lookup from data.json, and build Set of member project names
+        const toolByName = {};
+        (data.tools || []).forEach(t => { toolByName[t.name] = t; });
+        state.memberProjectNames = new Set(projects.map(p => p.toolName));
+        state.memberProjectByName = {};
+        projects.forEach(p => { state.memberProjectByName[p.toolName] = p; });
+        // Enrich projects with description from data.json
+        state.projects = projects.map(p => {
+          const tool = toolByName[p.toolName];
+          return { ...p, description: tool ? tool.description : '' };
+        });
+        renderContent();
+      })
+      .catch(err => {
+        console.error('Failed to load data:', err);
+        contentGrid.innerHTML = '<p class="text-muted text-sm col-span-2 text-center py-8">数据加载失败，请通过本地 HTTP 服务器访问此页面。</p>';
+      });
+
+    // Init Lucide icons
+    if (window.lucide) lucide.createIcons();
+  })();
+  </script>
+</body>
+</html>
