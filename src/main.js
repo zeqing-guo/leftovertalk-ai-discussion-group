@@ -43,8 +43,8 @@ import { createIcons, icons } from 'lucide';
   }
 
   // --- State ---
-  const urlParams = new URLSearchParams(window.location.search);
-  const initLang = urlParams.get('lang') === 'en' ? 'en'
+  const isEnPath = window.location.pathname.startsWith('/en');
+  const initLang = isEnPath ? 'en'
                  : localStorage.getItem('lang') === 'en' ? 'en'
                  : 'zh';
 
@@ -488,10 +488,17 @@ import { createIcons, icons } from 'lucide';
   });
 
   langToggle.addEventListener('click', () => {
-    state.lang = state.lang === 'zh' ? 'en' : 'zh';
-    localStorage.setItem('lang', state.lang);
-    applyLanguage();
-    loadData();
+    const newLang = state.lang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('lang', newLang);
+    if (newLang === 'en' && !window.location.pathname.startsWith('/en')) {
+      window.location.href = '/en/';
+    } else if (newLang === 'zh' && window.location.pathname.startsWith('/en')) {
+      window.location.href = '/';
+    } else {
+      state.lang = newLang;
+      applyLanguage();
+      loadData();
+    }
   });
 
   // Shadow on header scroll

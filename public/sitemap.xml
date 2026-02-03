@@ -7,6 +7,16 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ainotes.lambdaintheshell.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ainotes.lambdaintheshell.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ainotes.lambdaintheshell.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ainotes.lambdaintheshell.com/"/>
+  </url>
+  <url>
+    <loc>https://ainotes.lambdaintheshell.com/en/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ainotes.lambdaintheshell.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ainotes.lambdaintheshell.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ainotes.lambdaintheshell.com/"/>
   </url>
 </urlset>
