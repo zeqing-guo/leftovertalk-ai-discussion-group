@@ -220,7 +220,7 @@ import { createIcons, icons } from 'lucide';
   // --- Render ---
   function renderTabs(filteredTools, filteredExperiences, filteredProjects) {
     const active = state.activeTab;
-    const baseClass = 'tab-btn flex items-center gap-2 px-3 sm:px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] min-h-[44px]';
+    const baseClass = 'tab-btn flex items-center gap-2 px-3 sm:px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] min-h-[44px] whitespace-nowrap shrink-0';
     const activeClass = 'border-cta text-cta';
     const inactiveClass = 'border-transparent text-muted hover:text-text';
 

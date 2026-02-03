@@ -105,37 +105,39 @@
     <!-- Tab Navigation -->
     <section class="px-4 sm:px-6 pb-2">
       <div class="max-w-5xl mx-auto">
-        <div role="tablist" class="flex gap-0 border-b border-border">
-          <button
-            id="tab-tools"
-            role="tab"
-            aria-selected="true"
-            class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-cta text-cta min-h-[44px]"
-          >
-            <i data-lucide="wrench" class="w-4 h-4"></i>
-            工具 <span id="tab-tools-count" class="text-xs bg-cta/10 text-cta px-1.5 py-0.5 rounded-full"></span>
-          </button>
-          <button
-            id="tab-experiences"
-            role="tab"
-            aria-selected="false"
-            class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-transparent text-muted hover:text-text min-h-[44px]"
-          >
-            <i data-lucide="lightbulb" class="w-4 h-4"></i>
-            经验 <span id="tab-experiences-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
-          </button>
-          <button
-            id="tab-projects"
-            role="tab"
-            aria-selected="false"
-            class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-transparent text-muted hover:text-text min-h-[44px]"
-          >
-            <i data-lucide="users" class="w-4 h-4"></i>
-            群友项目 <span id="tab-projects-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
-          </button>
+        <div class="flex border-b border-border">
+          <div role="tablist" class="flex overflow-x-auto flex-1 min-w-0 tab-scroll">
+            <button
+              id="tab-tools"
+              role="tab"
+              aria-selected="true"
+              class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-cta text-cta min-h-[44px] whitespace-nowrap shrink-0"
+            >
+              <i data-lucide="wrench" class="w-4 h-4"></i>
+              工具 <span id="tab-tools-count" class="text-xs bg-cta/10 text-cta px-1.5 py-0.5 rounded-full"></span>
+            </button>
+            <button
+              id="tab-experiences"
+              role="tab"
+              aria-selected="false"
+              class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-transparent text-muted hover:text-text min-h-[44px] whitespace-nowrap shrink-0"
+            >
+              <i data-lucide="lightbulb" class="w-4 h-4"></i>
+              经验 <span id="tab-experiences-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
+            </button>
+            <button
+              id="tab-projects"
+              role="tab"
+              aria-selected="false"
+              class="tab-btn flex items-center gap-2 px-4 py-3 text-sm font-medium cursor-pointer border-b-[3px] border-transparent text-muted hover:text-text min-h-[44px] whitespace-nowrap shrink-0"
+            >
+              <i data-lucide="users" class="w-4 h-4"></i>
+              群友项目 <span id="tab-projects-count" class="text-xs bg-gray-100 text-muted px-1.5 py-0.5 rounded-full"></span>
+            </button>
+          </div>
           <button
             id="sort-btn"
-            class="ml-auto flex items-center gap-1.5 px-3 py-2 text-xs text-muted hover:text-text cursor-pointer transition-colors min-h-[44px] whitespace-nowrap"
+            class="flex items-center gap-1.5 px-3 py-2 text-xs text-muted hover:text-text cursor-pointer transition-colors min-h-[44px] whitespace-nowrap shrink-0 border-b-[3px] border-transparent"
             title="按时间排序"
           >
             <span id="sort-label">时间顺序 ↓</span>

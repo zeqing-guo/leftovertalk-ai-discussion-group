@@ -6,6 +6,15 @@ html { scrollbar-gutter: stable; }
 body { font-family: 'Fira Sans', sans-serif; }
 h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Fira Code', monospace; }
 
+/* Tab scroll - hide scrollbar */
+.tab-scroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.tab-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
 /* Line clamp */
 .line-clamp-3 {
   display: -webkit-box;
